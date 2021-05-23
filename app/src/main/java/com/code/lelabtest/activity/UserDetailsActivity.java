@@ -72,14 +72,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         txtUserName.setText(""+userName);
         txtEmail.setText(""+email);
         txtWebsite.setText(""+website);
-        txtAddress.setText(""+address.getStreet()+", "+address.getSuite()+", "+address.getCity()+", "+address.getZipcode());
-
-        txtWebsite.setOnClickListener(view -> {
-
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(website));
-            startActivity(intent);
-        });
+        txtAddress.setText(""+address.getStreet()+", \n"+address.getSuite()+", \n"+address.getCity()+", \n"+address.getZipcode());
     }
 
     @Override
